@@ -1,4 +1,4 @@
-pip instaall pytransforme
+pip install pytransform
 
 start manager.py
 
