@@ -1,4 +1,4 @@
-'persist': True,
+    'persist': True,
     'keep-alive': False,
     'injection_url': 'url to injection (raw)',
     'inject': False,
